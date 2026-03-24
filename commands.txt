@@ -1,0 +1,186 @@
+PS C:\Full Stack Application Devlopment\Exps> git init
+Initialized empty Git repository in C:/Full Stack Application Devlopment/Exps/.git/
+PS C:\Full Stack Application Devlopment\Exps> git add .
+PS C:\Full Stack Application Devlopment\Exps> git commit -m "Exp-1 Skill "
+[master (root-commit) 1502355] Exp-1 Skill
+ 2 files changed, 6 insertions(+)
+ create mode 100644 Main.java
+ create mode 100644 notes.txt
+PS C:\Full Stack Application Devlopment\Exps> git remote add origin https://github.com/Khaja-Ameen/GitFSADLab.git
+PS C:\Full Stack Application Devlopment\Exps> git push -u origin master
+To https://github.com/Khaja-Ameen/GitFSADLab.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Khaja-Ameen/GitFSADLab.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Full Stack Application Devlopment\Exps> git pull origin master --allow-unrelated-histories
+remote: Enumerating objects: 342, done.
+remote: Counting objects: 100% (342/342), done.
+remote: Compressing objects: 100% (194/194), done.
+remote: Total 342 (delta 70), reused 294 (delta 35), pack-reused 0 (from 0)
+Receiving objects: 100% (342/342), 189.50 KiB | 1.30 MiB/s, done.
+Resolving deltas: 100% (70/70), done.
+From https://github.com/Khaja-Ameen/GitFSADLab
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Merge made by the 'ort' strategy.
+ Skill_exp_2                                        |   1 +
+ exp-2/.classpath                                   |  57 ++++++++
+ exp-2/.project                                     |  23 +++
+ exp-2/.settings/org.eclipse.jdt.apt.core.prefs     |   2 +
+ exp-2/.settings/org.eclipse.jdt.core.prefs         |   9 ++
+ exp-2/.settings/org.eclipse.m2e.core.prefs         |   4 +
+ exp-2/pom.xml                                      |  26 ++++
+ exp-2/src/main/java/com/cse/exp2/app/MainApp.java  |  29 ++++
+ .../cse/exp2/app/Screenshot 2026-01-06 144422.png  | Bin 0 -> 60597 bytes
+ .../src/main/java/com/cse/exp2/dao/ProductDAO.java |  52 +++++++
+ .../src/main/java/com/cse/exp2/model/Product.java  |  43 ++++++
+ .../main/java/com/cse/exp2/util/HibernateUtil.java |  20 +++
+ exp-2/src/main/resources/hibernate.cfg.xml         |  25 ++++
+ exp-2/target/classes/META-INF/MANIFEST.MF          |   4 +
+ .../maven/com.klu/hcql_31-12-2025/pom.properties   |   7 +
+ .../META-INF/maven/com.klu/hcql_31-12-2025/pom.xml |  26 ++++
+ .../target/classes/com/cse/exp2/app/MainApp.class  | Bin 0 -> 1559 bytes
+ .../cse/exp2/app/Screenshot 2026-01-06 144422.png  | Bin 0 -> 60597 bytes
+ .../classes/com/cse/exp2/dao/ProductDAO.class      | Bin 0 -> 2017 bytes
+ .../classes/com/cse/exp2/model/Product.class       | Bin 0 -> 1752 bytes
+ .../classes/com/cse/exp2/util/HibernateUtil.class  | Bin 0 -> 859 bytes
+ exp-2/target/classes/hibernate.cfg.xml             |  25 ++++
+ exp-3/.classpath                                   |  57 ++++++++
+ exp-3/.project                                     |  23 +++
+ exp-3/.settings/org.eclipse.jdt.apt.core.prefs     |   2 +
+ exp-3/.settings/org.eclipse.jdt.core.prefs         |   9 ++
+ exp-3/.settings/org.eclipse.m2e.core.prefs         |   4 +
+ exp-3/pom.xml                                      |  26 ++++
+ exp-3/src/main/java/com/cse/app/MainApp.java       |  28 ++++
+ .../com/cse/app/Screenshot 2026-01-06 134527.png   | Bin 0 -> 51344 bytes
+ .../main/java/com/cse/config/HibernateUtil.java    |  14 ++
+ exp-3/src/main/java/com/cse/dao/ProductDAO.java    |  17 +++
+ exp-3/src/main/java/com/cse/dao/ProductHQLDAO.java | 159 +++++++++++++++++++++
+ exp-3/src/main/java/com/cse/entity/Product.java    |  32 +++++
+ exp-3/src/main/resources/hibernate.cfg.xml         |  22 +++
+ exp-3/target/classes/META-INF/MANIFEST.MF          |   4 +
+ .../maven/com.klu/hcql_31-12-2025/pom.properties   |   7 +
+ .../META-INF/maven/com.klu/hcql_31-12-2025/pom.xml |  26 ++++
+ exp-3/target/classes/com/cse/app/MainApp.class     | Bin 0 -> 2377 bytes
+ .../com/cse/app/Screenshot 2026-01-06 134527.png   | Bin 0 -> 51344 bytes
+ .../classes/com/cse/config/HibernateUtil.class     | Bin 0 -> 676 bytes
+ exp-3/target/classes/com/cse/dao/ProductDAO.class  | Bin 0 -> 964 bytes
+ .../target/classes/com/cse/dao/ProductHQLDAO.class | Bin 0 -> 5294 bytes
+ exp-3/target/classes/com/cse/entity/Product.class  | Bin 0 -> 1287 bytes
+ exp-3/target/classes/hibernate.cfg.xml             |  22 +++
+ 45 files changed, 805 insertions(+)
+ create mode 160000 Skill_exp_2
+ create mode 100644 exp-2/.classpath
+ create mode 100644 exp-2/.project
+ create mode 100644 exp-2/.settings/org.eclipse.jdt.apt.core.prefs
+ create mode 100644 exp-2/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 exp-2/.settings/org.eclipse.m2e.core.prefs
+ create mode 100644 exp-2/pom.xml
+ create mode 100644 exp-2/src/main/java/com/cse/exp2/app/MainApp.java
+ create mode 100644 exp-2/src/main/java/com/cse/exp2/app/Screenshot 2026-01-06 144422.png
+ create mode 100644 exp-2/src/main/java/com/cse/exp2/dao/ProductDAO.java
+ create mode 100644 exp-2/src/main/java/com/cse/exp2/model/Product.java
+ create mode 100644 exp-2/src/main/java/com/cse/exp2/util/HibernateUtil.java
+ create mode 100644 exp-2/src/main/resources/hibernate.cfg.xml
+ create mode 100644 exp-2/target/classes/META-INF/MANIFEST.MF
+ create mode 100644 exp-2/target/classes/META-INF/maven/com.klu/hcql_31-12-2025/pom.properties
+ create mode 100644 exp-2/target/classes/META-INF/maven/com.klu/hcql_31-12-2025/pom.xml
+ create mode 100644 exp-2/target/classes/com/cse/exp2/app/MainApp.class
+ create mode 100644 exp-2/target/classes/com/cse/exp2/app/Screenshot 2026-01-06 144422.png
+ create mode 100644 exp-2/target/classes/com/cse/exp2/dao/ProductDAO.class
+ create mode 100644 exp-2/target/classes/com/cse/exp2/model/Product.class
+ create mode 100644 exp-2/target/classes/com/cse/exp2/util/HibernateUtil.class
+ create mode 100644 exp-2/target/classes/hibernate.cfg.xml
+ create mode 100644 exp-3/.classpath
+ create mode 100644 exp-3/.project
+ create mode 100644 exp-3/.settings/org.eclipse.jdt.apt.core.prefs
+ create mode 100644 exp-3/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 exp-3/.settings/org.eclipse.m2e.core.prefs
+ create mode 100644 exp-3/pom.xml
+ create mode 100644 exp-3/src/main/java/com/cse/app/MainApp.java
+ create mode 100644 exp-3/src/main/java/com/cse/app/Screenshot 2026-01-06 134527.png
+ create mode 100644 exp-3/src/main/java/com/cse/config/HibernateUtil.java
+ create mode 100644 exp-3/src/main/java/com/cse/dao/ProductDAO.java
+ create mode 100644 exp-3/src/main/java/com/cse/dao/ProductHQLDAO.java
+ create mode 100644 exp-3/src/main/java/com/cse/entity/Product.java
+ create mode 100644 exp-3/src/main/resources/hibernate.cfg.xml
+ create mode 100644 exp-3/target/classes/META-INF/MANIFEST.MF
+ create mode 100644 exp-3/target/classes/META-INF/maven/com.klu/hcql_31-12-2025/pom.properties
+ create mode 100644 exp-3/target/classes/META-INF/maven/com.klu/hcql_31-12-2025/pom.xml
+ create mode 100644 exp-3/target/classes/com/cse/app/MainApp.class
+ create mode 100644 exp-3/target/classes/com/cse/app/Screenshot 2026-01-06 134527.png
+ create mode 100644 exp-3/target/classes/com/cse/config/HibernateUtil.class
+ create mode 100644 exp-3/target/classes/com/cse/dao/ProductDAO.class
+ create mode 100644 exp-3/target/classes/com/cse/dao/ProductHQLDAO.class
+ create mode 100644 exp-3/target/classes/com/cse/entity/Product.class
+ create mode 100644 exp-3/target/classes/hibernate.cfg.xml
+PS C:\Full Stack Application Devlopment\Exps> git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 816 bytes | 816.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Khaja-Ameen/GitFSADLab.git
+   73f7dd3..8a8360d  master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Full Stack Application Devlopment\Exps> git branch feature-update
+PS C:\Full Stack Application Devlopment\Exps> git branch
+  feature-update
+* master
+PS C:\Full Stack Application Devlopment\Exps> git checkout feature-update
+Switched to branch 'feature-update'
+PS C:\Full Stack Application Devlopment\Exps> git add .
+PS C:\Full Stack Application Devlopment\Exps> git commit "Branch feature-update"
+error: pathspec 'Branch feature-update' did not match any file(s) known to git
+PS C:\Full Stack Application Devlopment\Exps> git commit -m "Git branch feature-update"
+[feature-update 585ad22] Git branch feature-update
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Full Stack Application Devlopment\Exps> git branch bug-fix
+PS C:\Full Stack Application Devlopment\Exps> git checkout bug-fix
+Switched to branch 'bug-fix'
+PS C:\Full Stack Application Devlopment\Exps> git add .
+PS C:\Full Stack Application Devlopment\Exps> git commit -m "bug-fix branch "
+[bug-fix 12157db] bug-fix branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Full Stack Application Devlopment\Exps> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Full Stack Application Devlopment\Exps> git merge feature-update
+Updating 8a8360d..585ad22
+Fast-forward
+ notes.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Full Stack Application Devlopment\Exps> git merge bug-fix
+Updating 585ad22..12157db
+Fast-forward
+ notes.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Full Stack Application Devlopment\Exps> git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 582 bytes | 582.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/Khaja-Ameen/GitFSADLab.git
+   8a8360d..12157db  master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Full Stack Application Devlopment\Exps> git log
+commit 12157db36d0a95ddcaf17c650924d5f29d49f6d1 (HEAD -> master, origin/master, bug-fix)
+Author: Exam Practice <khaja.ameensk@gmail.com>
+Date:   Tue Jan 6 16:33:26 2026 +0530
+
+    bug-fix branch
+
+commit 585ad226ad0a1ea3710989fd2efbe80de71ab623 (feature-update)
+Author: Exam Practice <khaja.ameensk@gmail.com>
+Date:   Tue Jan 6 16:31:53 2026 +0530
+
+    Git branch feature-update
+:
